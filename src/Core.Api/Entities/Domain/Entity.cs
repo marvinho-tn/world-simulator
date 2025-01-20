@@ -7,7 +7,7 @@ public class Entity
     public ObjectId? Id { get; set; }
     public required string Description { get; set; }
     public required List<Property> Properties { get; set; }
-    public required List<Rule> Rules { get; set; }
+    public List<Rule>? Rules { get; set; }
     public required DateTime Created { get; set; }
     public required DateTime Updated { get; set; }
 
@@ -15,6 +15,7 @@ public class Entity
     {
         public enum PropertyType
         {
+            None,
             String,
             Number,
             Boolean,
